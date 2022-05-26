@@ -118,32 +118,36 @@ img {
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 8rem;
+  min-height: 8rem;
   width: 100%;
-  padding: 0 6rem;
+  padding: 0 10rem;
   z-index: 100;
 }
 
 /* nav and stickly class at the same time */
 .nav.sticky {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 10rem; */
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .nav__logo {
-  /* height: 4.5rem; */
+  margin-top: 1.7rem;
+  height: 4rem;
   transition: all 0.3s;
 }
 
 .nav__links {
   display: flex;
-  align-items: center;
   list-style: none;
 }
 
 .nav__item {
-  margin-left: 8rem;
+  margin-right: 4rem;
+  margin-top: 3rem;
+  width: 14rem;
 }
 
 .nav__link:link,
@@ -158,6 +162,7 @@ img {
 
 .nav__link--btn:link,
 .nav__link--btn:visited {
+  margin-top: 2rem;
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
@@ -695,4 +700,39 @@ h4 {
   color: #fff;
   font-size: 1.7rem;
   font-weight: 500;
+}
+
+.level-0--a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.level-0.hidden {
+  display: none;
+  transition: transform 3s;
+}
+
+.level-0 {
+  display: block;
+  list-style: none;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  transition: transform 3s;
+}
+
+.level-0 a:hover {
+  text-decoration: underline;
+}
+
+.level-0:link,
+.level-0:visited {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }

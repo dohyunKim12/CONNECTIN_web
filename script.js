@@ -7,6 +7,7 @@ const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const nav = document.querySelector('.nav');
+const navMenus = document.querySelectorAll('.level-0');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
@@ -64,27 +65,18 @@ document.addEventListener('keydown', function (e) {
 ///////////////////////////////////////
 // Page navigation
 
-// document.querySelectorAll('.nav__link').forEach(function (el) {
-//   el.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-//   });
-// });
-
 // 1. Add event listener to common parent element
 // 2. Determine what element originated the event
 
-document.querySelector('.nav__links').addEventListener('click', function (e) {
-  e.preventDefault();
+// document.querySelector('.nav__links').addEventListener('click', function (e) {
+//   e.preventDefault();
 
-  // Matching strategy
-  if (e.target.classList.contains('nav__link')) {
-    const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  }
-});
+//   // Matching strategy
+//   if (e.target.classList.contains('nav__link')) {
+//     const id = e.target.getAttribute('href');
+//     console.log(id);
+//   }
+// });
 
 ///////////////////////////////////////
 // Tabbed component
@@ -124,8 +116,8 @@ const handleHover = function (e) {
 };
 
 // Passing "argument" into handler
-nav.addEventListener('mouseover', handleHover.bind(0.5));
-nav.addEventListener('mouseout', handleHover.bind(1));
+// nav.addEventListener('mouseover', handleHover.bind(0.5));
+// nav.addEventListener('mouseout', handleHover.bind(1));
 
 ///////////////////////////////////////
 // Sticky navigation: Intersection Observer API
@@ -141,7 +133,6 @@ const SV = {
 const slideStart = function () {
   SV.isPause = false;
   SV.timer = setInterval(function () {
-    console.log('asdf');
     nextSlide();
   }, 5000);
 };
@@ -152,6 +143,7 @@ const stickyNav = function (entries) {
 
   if (!entry.isIntersecting) {
     nav.classList.add('sticky');
+    nav.style.transition = 'all 5s';
     clearInterval(SV.timer);
   } else {
     nav.classList.remove('sticky');
@@ -299,7 +291,6 @@ const slider = function () {
     }
   });
   dotContainer.addEventListener('mouseover', function () {
-    console.log('fuckyou!');
     clearInterval(SV.timer);
   });
   dotContainer.addEventListener('mouseout', function () {
@@ -307,3 +298,10 @@ const slider = function () {
   });
 };
 slider();
+
+nav.addEventListener('mouseover', function () {
+  navMenus.forEach(menu => menu.classList.toggle('hidden'));
+});
+nav.addEventListener('mouseout', function () {
+  navMenus.forEach(menu => menu.classList.toggle('hidden'));
+});
