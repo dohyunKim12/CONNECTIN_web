@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #054986;
+  --color-primary-new: #1f04a5;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
   --color-primary-darker: #171c61;
@@ -12,6 +13,7 @@
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --color-blue: #1461db;
 }
 
 * {
@@ -67,7 +69,7 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: #1461db;
+  background-color: var(--color-blue);
   color: #fff;
   font-size: 17px;
   font-family: inherit;
@@ -165,7 +167,7 @@ img {
   margin-top: 2rem;
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-blue);
   color: #eee;
 }
 

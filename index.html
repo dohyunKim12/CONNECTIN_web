@@ -4,32 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="img/connectin-mini-logo-new.png" />
+    <link rel="shortcut icon" type="image/png" href="src/img/connectin-mini-logo-new.png" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="module" defer src="src/js/controller.js"></script>
     <title>CONNECTIN 방문을 환영합니다.</title>
   </head>
   <body>
     <header class="header">
       <div class="nav">
+        <a href="/">
         <img
-          src="img/connectin-logo-new.png"
+          src="src/img/connectin-logo-new.png"
           alt="Connectin logo"
           class="nav__logo"
           id="logo"
           designer="Dohyun"
           data-version-number="3.0"
         />
+        </a>
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link" href="https://github.com/dohyunKim12">ABOUT</a>
             <ul class="level-0 hidden">
               <li>
-                <a class="level-0--a" href="/about/overview">회사개요</a>
+                <a class="level-0--a" href="#/about/overview">회사개요</a>
               </li>
               <li>
                 <a class="level-0--a" href="/about/overview" >CEO메세지</a>
@@ -111,19 +114,21 @@
       </div>
     </header>
 
+    
+    <div class="all-section">
     <section class="section" id="section--1" style="padding:0rem">
       <div class="slider">
         <div class="slide slide--1">
-              <img src="img/img-1_small.png" alt="img-1" />
+              <img src="src/img/slider-img-1.png" alt="img-1" />
         </div>
         <div class="slide slide--2">
-              <img src="img/img-2_small.png" alt="img-2" />
+              <img src="src/img/slider-img-2.png" alt="img-2" />
         </div>
         <div class="slide slide--3">
-              <img src="img/img-3_small.png" alt="img-3" />
+              <img src="src/img/slider-img-3.png" alt="img-3" />
         </div>
         <div class="slide slide--4">
-              <img src="img/img-4_small.png" alt="img-4" />
+              <img src="src/img/slider-img-4.png" alt="img-4" />
         </div>
         <button class="slider__btn slider__btn--left hidden">&larr;</button>
         <button class="slider__btn slider__btn--right hidden">&rarr;</button>
@@ -140,11 +145,11 @@
       </div>
 
       <div class="features">
-        <img src="img/digital.jpg" alt="Computer" class="features__img" />
+        <img src="src/img/digital.jpg" alt="Computer" class="features__img" />
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
+              <use xlink:href="src/img/icons.svg#icon-monitor"></use>
             </svg>
           </div>
           <h5 class="features__header">100% digital bank</h5>
@@ -158,7 +163,7 @@
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+              <use xlink:href="src/img/icons.svg#icon-trending-up"></use>
             </svg>
           </div>
           <h5 class="features__header">Watch your money grow</h5>
@@ -168,13 +173,13 @@
             quibusdam!
           </p>
         </div>
-        <img src="img/grow.jpg" alt="Plant" class="features__img" />
+        <img src="src/img/grow.jpg" alt="Plant" class="features__img" />
 
-        <img src="img/card.jpg" alt="Credit card" class="features__img" />
+        <img src="src/img/card.jpg" alt="Credit card" class="features__img" />
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+              <use xlink:href="src/img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
           <h5 class="features__header">Free debit card included</h5>
@@ -215,7 +220,7 @@
         >
           <div class="operations__icon operations__icon--1">
             <svg>
-              <use xlink:href="img/icons.svg#icon-upload"></use>
+              <use xlink:href="src/img/icons.svg#icon-upload"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -232,7 +237,7 @@
         <div class="operations__content operations__content--2">
           <div class="operations__icon operations__icon--2">
             <svg>
-              <use xlink:href="img/icons.svg#icon-home"></use>
+              <use xlink:href="src/img/icons.svg#icon-home"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -248,7 +253,7 @@
         <div class="operations__content operations__content--3">
           <div class="operations__icon operations__icon--3">
             <svg>
-              <use xlink:href="img/icons.svg#icon-user-x"></use>
+              <use xlink:href="src/img/icons.svg#icon-user-x"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -263,6 +268,7 @@
         </div>
       </div>
     </section>
+    </div>
 
 
     <section class="section section--sign-up">
@@ -300,7 +306,7 @@
         </li>
       </ul>
 
-      <img src="img/connectin-mini-logo-new.png" alt="Logo" class="footer__logo" />
+      <img src="src/img/connectin-mini-logo-new.png" alt="Logo" class="footer__logo" />
       <div class="footer__copyright">
       (주)커넥틴 <br />
       <div id="footerMenu">
@@ -365,6 +371,5 @@
     </div>
     <div class="overlay hidden"></div>
 
-    <script src="script.js"></script>
   </body>
 </html>
