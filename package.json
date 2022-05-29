@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dohyunKim12/CONNECTIN_web#readme",
   "devDependencies": {
-    "parcel": "^2.5.0"
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
   }
 }

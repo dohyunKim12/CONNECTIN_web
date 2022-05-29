@@ -149,7 +149,7 @@ img {
 .nav__item {
   margin-right: 4rem;
   margin-top: 3rem;
-  width: 14rem;
+  width: 11rem;
 }
 
 .nav__link:link,
@@ -737,4 +737,96 @@ h4 {
   color: inherit;
   text-decoration: none;
   display: block;
+}
+
+.news {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.news li {
+  width: 47%;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.news h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.news p {
+  font-size: 2rem;
+}
+
+.newsimg.newsclipping {
+  background-image: url('img/newsclipping.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 250px;
+}
+.newsimg.notice {
+  background-image: url('img/notice.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 250px;
+}
+
+.arrowbox {
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.arrow {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-width: 0.8vmin 0.8vmin 0 0;
+    border-style: solid;
+    border-color: gray;
+    transition: 0.2s ease;
+    display: block;
+    transform-origin: 100% 0;
+  }
+
+  &:after {
+    content: '';
+    float: left;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    border-width: 0 0.8vmin 0 0;
+    border-style: solid;
+    border-color: gray;
+    transform-origin: 100% 0;
+    transition: 0.2s ease;
+  }
+
+  &:hover::after {
+    transform: rotate(45deg);
+    border-color: orange;
+    height: 120%;
+  }
+  &:hover::before {
+    border-color: orange;
+    transform: scale(0.8);
+  }
+}
+
+.right {
+  transform: rotate(+45deg);
 }

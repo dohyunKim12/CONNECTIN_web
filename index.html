@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.scss" />
     <script type="module" defer src="src/js/controller.js"></script>
     <title>CONNECTIN 방문을 환영합니다.</title>
   </head>
@@ -138,21 +138,22 @@
 
     <section class="section" id="section--2">
       <div class="section__title">
-        <h2 class="section__description">Features</h2>
+        <h2 class="section__description">Connect-人</h2>
         <h3 class="section__header">
-          Everything you need in a modern solution and more.
+          사람과 사람과의 <span style="color:orange">연결.</span> 무한한 <span style="color:yellowgreen">확장성.</span><br>
         </h3>
+          <p style="font-size:3rem; font-weight: 400;">Everything you need in a modern solution and more.</p>
       </div>
 
       <div class="features">
-        <img src="src/img/digital.jpg" alt="Computer" class="features__img" />
+        <img src="src/img/matching.jpg" alt="Computer" class="features__img" />
         <div class="features__feature">
           <div class="features__icon">
             <svg>
               <use xlink:href="src/img/icons.svg#icon-monitor"></use>
             </svg>
           </div>
-          <h5 class="features__header">100% digital bank</h5>
+          <h5 class="features__header">위치기반 건설인력 매칭</h5>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
             sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
@@ -166,23 +167,23 @@
               <use xlink:href="src/img/icons.svg#icon-trending-up"></use>
             </svg>
           </div>
-          <h5 class="features__header">Watch your money grow</h5>
+          <h5 class="features__header">Tag 기능을 통한 자동 출역관리</h5>
           <p>
             Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
             inventore ab? Nulla incidunt eius numquam sequi iste pariatur
             quibusdam!
           </p>
         </div>
-        <img src="src/img/grow.jpg" alt="Plant" class="features__img" />
+        <img src="src/img/tagging.jpg" alt="Plant" class="features__img" />
 
-        <img src="src/img/card.jpg" alt="Credit card" class="features__img" />
+        <img src="src/img/profile.jpg" alt="Credit card" class="features__img" />
         <div class="features__feature">
           <div class="features__icon">
             <svg>
               <use xlink:href="src/img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
-          <h5 class="features__header">Free debit card included</h5>
+          <h5 class="features__header">평가 기반 인력 프로필 생성</h5>
           <p>
             Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
             eveniet consequatur odit quam quos possimus assumenda dicta fuga
@@ -193,80 +194,28 @@
     </section>
 
     <section class="section" id="section--3">
-      <div class="section__title">
-        <h2 class="section__description">Operations</h2>
-        <h3 class="section__header">
-          Everything as simple as possible, but no simpler.
-        </h3>
-      </div>
-
-      <div class="operations">
-        <div class="operations__tab-container">
-          <button
-            class="btn operations__tab operations__tab--1 operations__tab--active"
-            data-tab="1"
-          >
-            <span>01</span>Instant Transfers
-          </button>
-          <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span>02</span>Instant Loans
-          </button>
-          <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span>03</span>Instant Closing
-          </button>
-        </div>
-        <div
-          class="operations__content operations__content--1 operations__content--active"
-        >
-          <div class="operations__icon operations__icon--1">
-            <svg>
-              <use xlink:href="src/img/icons.svg#icon-upload"></use>
-            </svg>
-          </div>
-          <h5 class="operations__header">
-            Tranfser money to anyone, instantly! No fees, no BS.
-          </h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </div>
-
-        <div class="operations__content operations__content--2">
-          <div class="operations__icon operations__icon--2">
-            <svg>
-              <use xlink:href="src/img/icons.svg#icon-home"></use>
-            </svg>
-          </div>
-          <h5 class="operations__header">
-            Buy a home or make your dreams come true, with instant loans.
-          </h5>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-        </div>
-        <div class="operations__content operations__content--3">
-          <div class="operations__icon operations__icon--3">
-            <svg>
-              <use xlink:href="src/img/icons.svg#icon-user-x"></use>
-            </svg>
-          </div>
-          <h5 class="operations__header">
-            No longer need your account? No problem! Close it instantly.
-          </h5>
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-        </div>
-      </div>
+        <ul class="news">
+          <li>
+            <h1>뉴스클리핑</h1> 
+            <p>매채에 소개된 커넥틴 관련 소식을 전해드립니다.</p>
+            <a href="/support/press">
+              <div class="arrowbox">
+                <div class="arrow right"></div>
+              </div>
+            </a>
+            <div class="newsimg newsclipping"></div>
+          </li>
+          <li>
+            <h1>공지사항</h1> 
+            <p>기업과 제품에 대한 다양한 소식을 전해드립니다.</p>
+            <a href="/support/press">
+              <div class="arrowbox">
+                <div class="arrow right"></div>
+              </div>
+            </a>
+            <div class="newsimg notice"></div>
+          </li>
+        </ul>
     </section>
     </div>
 
